@@ -9,21 +9,59 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.github.fedy2/yahoo-weather-java-api -->
-        <dependency>
-            <groupId>com.github.fedy2</groupId>
-            <artifactId>yahoo-weather-java-api</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.16</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openweathermap.java-api/api-common -->
+        <dependency>
+            <groupId>org.openweathermap.java-api</groupId>
+            <artifactId>api-common</artifactId>
+            <version>1.2</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openweathermap.java-api/api-model -->
+        <dependency>
+            <groupId>org.openweathermap.java-api</groupId>
+            <artifactId>api-model</artifactId>
+            <version>1.2</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openweathermap.java-api/api-query -->
+        <dependency>
+            <groupId>org.openweathermap.java-api</groupId>
+            <artifactId>api-query</artifactId>
+            <version>1.2</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openweathermap.java-api/api-core -->
+        <dependency>
+            <groupId>org.openweathermap.java-api</groupId>
+            <artifactId>api-core</artifactId>
+            <version>1.2</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openweathermap.java-api</groupId>
+            <artifactId>api-examples</artifactId>
+            <version>1.2</version>
+            <type>pom</type>
+        </dependency>
     </dependencies>
 
-
-
+    <repositories>
+        <repository>
+            <id>spring-lib-release</id>
+            <name>Spring Repository</name>
+            <url>http://repo.spring.io/libs-release/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 </project>
