@@ -1,5 +1,6 @@
 package app;
 
+import app.database.ConnectionClass;
 import app.weather.info.CityBuilder;
 import app.weather.info.WeatherInfo;
 import org.openweathermap.api.model.forecast.ForecastInformation;
@@ -7,9 +8,18 @@ import org.openweathermap.api.model.forecast.hourly.HourlyForecast;
 
 public class Main
 {
+    private static void createDB()
+    {
+        ConnectionClass.createDB();
+        ConnectionClass.createTables();
+    }
+
     public static void main( String[] args )
     {
+        createDB();
+
         CityBuilder cityBuilder = new CityBuilder();
+        cityBuilder = cityBuilder.cityName("Krakow");
         WeatherInfo wnfo = new WeatherInfo(cityBuilder);
 
         System.out.println( wnfo.currentClouds() );

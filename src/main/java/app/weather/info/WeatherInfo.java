@@ -19,14 +19,17 @@ public class WeatherInfo
     private CityBuilder cityBuilder;
     private DataWeatherClient client;
 
+    /**
+     * sets city information
+     * @param cityBuilder
+     */
     public WeatherInfo( CityBuilder cityBuilder )
     {
         this.cityBuilder = cityBuilder;
         this.client = new UrlConnectionDataWeatherClient(API_KEY);
     }
 
-    private CurrentWeatherOneLocationQuery currentWeatherOneLocationQuery()
-    {
+    private CurrentWeatherOneLocationQuery currentWeatherOneLocationQuery() {
         return QueryBuilderPicker.pick()
                 .currentWeather()                   // get current weather
                 .oneLocation()                      // for one location
@@ -39,8 +42,7 @@ public class WeatherInfo
                 .build();
     }
 
-    private ByCityName byCityNameForecast()
-    {
+    private ByCityName byCityNameForecast() {
         return QueryBuilderPicker.pick()
                 .forecast()                                         // get forecast
                 .hourly()                                           // it should be hourly forecast
@@ -57,13 +59,11 @@ public class WeatherInfo
         return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind();
     }
 
-    public double currentWindSpeed()
-    {
+    public double currentWindSpeed() {
         return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind().getSpeed();
     }
 
-    public double currentWindDirectionDegree()
-    {
+    public double currentWindDirectionDegree() {
         return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind().getDirection().getDegree();
     }
 
@@ -77,8 +77,7 @@ public class WeatherInfo
         return client.getCurrentWeather(currentWeatherOneLocationQuery()).getClouds();
     }
 
-    public double currentCloudsAll()
-    {
+    public double currentCloudsAll() {
         return client.getCurrentWeather(currentWeatherOneLocationQuery()).getClouds().getAll();
     }
 
@@ -107,8 +106,12 @@ public class WeatherInfo
         return currentWeather().getMainParameters().getPressure();
     }
 
-    public ForecastInformation<HourlyForecast> hourlyWeather()
-    {
+    /**
+     * returns weather info every 3 hour
+     * @return
+     */
+    public ForecastInformation<HourlyForecast> hourlyWeather() {
         return client.getForecastInformation(byCityNameForecast());
     }
+
 }
