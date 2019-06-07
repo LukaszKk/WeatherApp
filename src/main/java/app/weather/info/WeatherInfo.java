@@ -42,53 +42,43 @@ public class WeatherInfo
                 .build();
     }
 
-    private ByCityName byCityNameForecast() {
-        return QueryBuilderPicker.pick()
-                .forecast()                                         // get forecast
-                .hourly()                                           // it should be hourly forecast
-                .byCityName(cityBuilder.getCityName())
-                .countryCode(cityBuilder.getCountryCode())
-                .unitFormat(UnitFormat.METRIC)                      // in Metric units
-                .language(Language.ENGLISH)                         // in English
-                .count(8)                                           // limit results to X forecasts
-                .build();
+    private CurrentWeather currentWeather()
+    {
+        return client.getCurrentWeather(currentWeatherOneLocationQuery());
     }
 
-    public Wind currentWind()
+    private Wind currentWind()
     {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind();
+        return currentWeather().getWind();
     }
 
     public double currentWindSpeed() {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind().getSpeed();
+        return currentWind().getSpeed();
     }
 
     public double currentWindDirectionDegree() {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getWind().getDirection().getDegree();
+        if( currentWind().getDirection() == null )
+            return 0;
+        return currentWind().getDirection().getDegree();
     }
 
     public Rain currentRain()
     {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getRain();
+        return currentWeather().getRain();
     }
 
-    public Clouds currentClouds()
+    private Clouds currentClouds()
     {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getClouds();
+        return currentWeather().getClouds();
     }
 
     public double currentCloudsAll() {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getClouds().getAll();
+        return currentClouds().getAll();
     }
 
     public Snow currentSnow()
     {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery()).getSnow();
-    }
-
-    private CurrentWeather currentWeather()
-    {
-        return client.getCurrentWeather(currentWeatherOneLocationQuery());
+        return currentWeather().getSnow();
     }
 
     public double currentTemperature()
@@ -104,6 +94,18 @@ public class WeatherInfo
     public double currentPressure()
     {
         return currentWeather().getMainParameters().getPressure();
+    }
+
+    private ByCityName byCityNameForecast() {
+        return QueryBuilderPicker.pick()
+                .forecast()                                         // get forecast
+                .hourly()                                           // it should be hourly forecast
+                .byCityName(cityBuilder.getCityName())
+                .countryCode(cityBuilder.getCountryCode())
+                .unitFormat(UnitFormat.METRIC)                      // in Metric units
+                .language(Language.ENGLISH)                         // in English
+                .count(8)                                           // limit results to X forecasts
+                .build();
     }
 
     /**
