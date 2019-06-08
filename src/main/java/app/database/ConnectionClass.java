@@ -59,15 +59,14 @@ public class ConnectionClass
      * creates tables in DB
      */
     public static void createTables() {
+
         Connection connection = new ConnectionClass().getConnection();
         try {
             Statement statement = connection.createStatement();
-
-            //String sql = "CREATE TABLE IF NOT EXISTS weather(name VARCHAR(100), password VARCHAR(100), position VARCHAR(100));";
-            //statement.execute(sql);
-            //sql = "Drop Table dishes;";
-            //statement.execute(sql);
-
+            String sql = "CREATE TABLE IF NOT EXISTS weather(city VARCHAR(100), date VARCHAR(100), clouds DOUBLE, humidity DOUBLE, pressure DOUBLE, rain DOUBLE, snow DOUBLE, temperature DOUBLE, wind_speed DOUBLE, wind_direction DOUBLE);";
+            statement.execute(sql);
+            sql = "CREATE TABLE IF NOT EXISTS expectedWeather(city VARCHAR(100),dateRecord VARCHAR(100), dateTime VARCHAR(100), clouds DOUBLE, humidity DOUBLE, pressure DOUBLE, rain DOUBLE, snow DOUBLE, temperature DOUBLE, wind_speed DOUBLE, wind_direction DOUBLE);";
+            statement.execute(sql);
             statement.close();
             connection.close();
         } catch (SQLException e) {

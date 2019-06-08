@@ -12,6 +12,7 @@ public class Main extends Application
     {
         AppController controller = new AppController();
         controller.loadView(stage, "rootView");
+
     }
 
     public static void main( String[] args )
