@@ -28,7 +28,6 @@ public class ExpectedWeather {
         this.wind_direction = wind_direction;
     }
 
-
     public String getCity() {
         return city;
     }

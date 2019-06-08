@@ -25,8 +25,8 @@ import java.util.Calendar;
 public class AppController
 {
     private Weather weather;
-    //private RootViewController view = new RootViewController();
     private ExpectedWeather[] tabExpectredWeather = new ExpectedWeather[8];
+    //private RootViewController view = new RootViewController();
     public AppController()
     {
         createDB();
