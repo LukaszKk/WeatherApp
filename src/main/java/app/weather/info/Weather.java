@@ -46,7 +46,7 @@ public class Weather {
         this.city = city;
     }
 
-    public double getClouds() {
+    public Double getClouds() {
         return clouds;
     }
 
@@ -55,7 +55,7 @@ public class Weather {
         this.clouds = clouds;
     }
 
-    public double getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
@@ -64,7 +64,7 @@ public class Weather {
         this.humidity = humidity;
     }
 
-    public double getPressure() {
+    public Double getPressure() {
         return pressure;
     }
 
@@ -73,7 +73,7 @@ public class Weather {
         this.pressure = pressure;
     }
 
-    public double getRain() {
+    public Double getRain() {
         return rain;
     }
 
@@ -82,7 +82,7 @@ public class Weather {
         this.rain = rain;
     }
 
-    public double getSnow() {
+    public Double getSnow() {
         return snow;
     }
 
@@ -91,7 +91,7 @@ public class Weather {
         this.snow = snow;
     }
 
-    public double getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
@@ -100,7 +100,7 @@ public class Weather {
         this.temperature = temperature;
     }
 
-    public double getWind_speed() {
+    public Double getWind_speed() {
         return wind_speed;
     }
 
@@ -109,7 +109,7 @@ public class Weather {
         this.wind_speed = wind_speed;
     }
 
-    public double getWind_direction() {
+    public Double getWind_direction() {
         return wind_direction;
     }
 

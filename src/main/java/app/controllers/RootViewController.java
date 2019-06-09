@@ -2,6 +2,7 @@ package app.controllers;
 
 import app.weather.info.*;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.openweathermap.api.model.forecast.ForecastInformation;
 import org.openweathermap.api.model.forecast.hourly.HourlyForecast;
@@ -11,6 +12,14 @@ import java.text.SimpleDateFormat;
 public class RootViewController
 {
     public TextField city;
+    public Label dateLabel;
+    public Label tempLabel;
+    public Label pressLabel;
+    public Label humiLable;
+    public Label windSpeedLabel;
+    public Label windDirLabel;
+
+
     public CurrentWeather weather;
     public ExpectedWeather[] tabExpectedWeather = new ExpectedWeather[8];
 
@@ -25,6 +34,7 @@ public class RootViewController
         String s = city.getText();
         weather = new CurrentWeather(s);
         weather.save();
+        showWeather();
 
         CityBuilder cityBuilder = new CityBuilder();
         cityBuilder = cityBuilder.cityName(s);
@@ -52,5 +62,15 @@ public class RootViewController
             tabExpectedWeather[i].save();
             i++;
         }
+    }
+
+    public void showWeather()
+    {
+        dateLabel.setText(weather.getDate());
+        tempLabel.setText(weather.getTemperature().toString());
+        pressLabel.setText((weather.getPressure().toString()));
+        humiLable.setText((weather.getHumidity().toString()));
+        windSpeedLabel.setText((weather.getWind_speed().toString()));
+        windDirLabel.setText(weather.getWind_direction().toString());
     }
 }
