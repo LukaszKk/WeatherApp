@@ -29,6 +29,12 @@ public class RootViewController
     public Label windDirLabel;
     public ChoiceBox choiceRecord;
 
+    public Label E1Date;
+    public Label E1Temp;
+    public Label E1Pre;
+    public Label E1Humi;
+    public Label E1WindSpeed;
+    public Label E1WindDire;
 
     public CurrentWeather weather;
     public ExpectedWeather[] tabExpectedWeather = new ExpectedWeather[8];
@@ -84,6 +90,13 @@ public class RootViewController
         humiLabel.setText((weather.getHumidity().toString()));
         windSpeedLabel.setText((weather.getWind_speed().toString()));
         windDirLabel.setText(weather.getWind_direction().toString());
+
+        E1Date.setText(tabExpectedWeather[0].getDateTime());
+        E1Temp.setText(tabExpectedWeather[0].getTemperature().toString());
+        E1Pre.setText(tabExpectedWeather[0].getPressure().toString());
+        E1Humi.setText(tabExpectedWeather[0].getHumidity().toString());
+        E1WindSpeed.setText(tabExpectedWeather[0].getWind_speed().toString());
+        E1WindDire.setText(tabExpectedWeather[0].getWind_direction().toString());
     }
 
     public void initChoiceBox()

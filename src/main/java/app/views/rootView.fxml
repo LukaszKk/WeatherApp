@@ -78,6 +78,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E1Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E1Temp" layoutX="100.0" layoutY="45.0" prefHeight="21.0" prefWidth="76.0" />
+                  <Label fx:id="E1Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="76.0" />
+                  <Label fx:id="E1Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="76.0" />
+                  <Label fx:id="E1WindSpeed" layoutX="94.0" layoutY="105.0" prefHeight="21.0" prefWidth="64.0" />
+                  <Label fx:id="E1WindDire" layoutX="109.0" layoutY="125.0" prefHeight="21.0" prefWidth="57.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="201.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -324,6 +330,6 @@
       <Label fx:id="windSpeedLabel" layoutX="116.0" layoutY="189.0" prefHeight="21.0" prefWidth="76.0" />
       <Label fx:id="windDirLabel" layoutX="138.0" layoutY="216.0" prefHeight="21.0" prefWidth="59.0" />
       <ChoiceBox fx:id="choiceRecord" layoutX="21.0" layoutY="37.0" prefWidth="150.0" />
-      <Button fx:id="showRecord" layoutX="64.0" layoutY="72.0" onAction="#showRecordAction" mnemonicParsing="false" text="Show" />
+      <Button fx:id="showRecord" layoutX="64.0" layoutY="72.0" mnemonicParsing="false" onAction="#showRecordAction" text="Show" />
    </children>
 </AnchorPane>
