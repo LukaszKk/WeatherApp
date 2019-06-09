@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.Log;
 import app.WeatherFactory;
 import app.database.ConnectionClass;
 import app.weather.info.*;
@@ -38,12 +39,14 @@ public class RootViewController
 
     public CurrentWeather weather;
     public ExpectedWeather[] tabExpectedWeather = new ExpectedWeather[8];
-    WeatherFactory weatherFactory = new WeatherFactory();
+    public WeatherFactory weatherFactory = new WeatherFactory();
+    public Log log;
 
     @FXML
     private void initialize()
     {
         initChoiceBox();
+        log = Log.getInstance();
     }
 
     public void searchAction()
@@ -51,7 +54,7 @@ public class RootViewController
         String s = city.getText();
         weather = new CurrentWeather(s);
         weather.save();
-        showWeather();
+        log.printLog(weather);
 
         CityBuilder cityBuilder = new CityBuilder();
         cityBuilder = cityBuilder.cityName(s);
@@ -77,7 +80,10 @@ public class RootViewController
             i++;
         }
 
+        log.printLog(tabExpectedWeather);
+
         initChoiceBox();
+        showWeather();
 
     }
 
@@ -131,7 +137,9 @@ public class RootViewController
         str = str.substring(str.indexOf(';')+2);
 
         weather = loadWeatehrRecord(str);
+        log.printLog(weather);
         tabExpectedWeather = loadExpectedRecord(str);
+        log.printLog(tabExpectedWeather);
         showWeather();
     }
 
@@ -191,6 +199,7 @@ public class RootViewController
                 tab[i].setTemperature(resultSet.getDouble(9));
                 tab[i].setWind_speed(resultSet.getDouble(10));
                 tab[i].setWind_direction(resultSet.getDouble(11));
+                i++;
             }
 
             connection.close();
