@@ -37,8 +37,6 @@ public class Log {
                 weather.getWind_direction()
         );
         System.out.println(str);
-
-
     }
 
     public void printLog(ExpectedWeather[] weather)

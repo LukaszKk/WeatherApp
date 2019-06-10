@@ -24,11 +24,11 @@ public class CurrentWeather extends  Weather{
         this.date = date;
     }
 
-    public CurrentWeather(String city)
+    public CurrentWeather(String city, String code)
     {
         super();
         CityBuilder cityBuilder = new CityBuilder();
-        cityBuilder = cityBuilder.cityName(city);
+        cityBuilder = cityBuilder.cityName(city).countryCode(code);
         WeatherInfo wnfo = new WeatherInfo(cityBuilder);
 
         double rain;

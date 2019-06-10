@@ -23,7 +23,7 @@ public class AppController
 {
     private CurrentWeather weather;
     private ExpectedWeather[] tabExpectredWeather = new ExpectedWeather[8];
-    //private RootViewController view = new RootViewController();
+
     public AppController()
     {
         createDB();
@@ -53,7 +53,6 @@ public class AppController
         stage.show();
     }
 
-    /* TODO: DELETE OR CHANGE */
     private void getWeatherInfo()
     {
         CityBuilder cityBuilder = new CityBuilder();
@@ -79,7 +78,6 @@ public class AppController
 
     }
 
-    /* TODO: DELETE OR CHANGE */
     private static String print( HourlyForecast hourlyForecast )
     {
         return String.format( "Date: %s \t Temp: %.2f \t Humidity: %.2f \t Pressure: %.2f",

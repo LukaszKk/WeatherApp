@@ -58,10 +58,4 @@ public class ExpectedWeather extends Weather {
     {
         this.dateTime = dateTime;
     }
-
-
-
-
-
-
 }

@@ -55,13 +55,19 @@ public class RootViewController
 
     public void searchAction()
     {
-        String s = city.getText();
-        weather = new CurrentWeather(s);
+        String[] s = city.getText().split(", ");
+        if( s.length == 1 )
+            weather = new CurrentWeather(s[0], "PL");
+        else
+            weather = new CurrentWeather(s[0], s[1]);
         weather.save();
         log.printLog(weather);
 
         CityBuilder cityBuilder = new CityBuilder();
-        cityBuilder = cityBuilder.cityName(s);
+        if( s.length == 1 )
+            cityBuilder = cityBuilder.cityName(s[0]);
+        else
+            cityBuilder = cityBuilder.cityName(s[0]).countryCode(s[1]);
         WeatherInfo wnfo = new WeatherInfo(cityBuilder);
 
 
@@ -89,7 +95,7 @@ public class RootViewController
                 weatherImage.setImage(new Image(new File("src/main/java/images/cloudy.png").toURI().toString()));
                 weatherImage.setVisible(true);
             }
-            tabExpectedWeather[i] = new ExpectedWeather(s, weather.getDate(), forecast.getDateTime().toString(), forecast.getClouds().getAll(), forecast.getMainParameters().getHumidity(), forecast.getMainParameters().getPressure(), rain, snow, forecast.getMainParameters().getTemperature(), forecast.getWind().getSpeed(), forecast.getWind().getDirection().getDegree() );
+            tabExpectedWeather[i] = new ExpectedWeather(s[0], weather.getDate(), forecast.getDateTime().toString(), forecast.getClouds().getAll(), forecast.getMainParameters().getHumidity(), forecast.getMainParameters().getPressure(), rain, snow, forecast.getMainParameters().getTemperature(), forecast.getWind().getSpeed(), forecast.getWind().getDirection().getDegree() );
             tabExpectedWeather[i].save();
             i++;
         }
