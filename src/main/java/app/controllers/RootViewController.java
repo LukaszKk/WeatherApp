@@ -83,7 +83,8 @@ public class RootViewController
                 weatherImage.setImage(new Image(new File("src/main/java/images/snow.png").toURI().toString()));
             }
             if (forecast.getClouds() == null) {
-
+                weatherImage.setImage(new Image(new File("src/main/java/images/sunny.png").toURI().toString()));
+                weatherImage.setVisible(true);
             } else {
                 weatherImage.setImage(new Image(new File("src/main/java/images/cloudy.png").toURI().toString()));
                 weatherImage.setVisible(true);
