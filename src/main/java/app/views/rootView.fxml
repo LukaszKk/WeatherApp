@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #74a6f7;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.RootViewController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #74a6f7;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.RootViewController">
    <children>
       <TextField fx:id="city" layoutX="233.0" layoutY="72.0" prefHeight="25.0" prefWidth="334.0" />
       <AnchorPane layoutY="250.0" prefHeight="350.0" prefWidth="800.0" style="-fx-background-color: #1f6ae2;">
@@ -45,6 +45,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E5Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E5Temp" layoutX="106.0" layoutY="45.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E5Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="118.0" />
+                  <Label fx:id="E5Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E5WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E5WindDire" layoutX="115.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -79,12 +85,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="E1Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E1Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="128.0" />
                   <Label fx:id="E1Temp" layoutX="100.0" layoutY="45.0" prefHeight="21.0" prefWidth="76.0" />
-                  <Label fx:id="E1Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="76.0" />
-                  <Label fx:id="E1Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="76.0" />
-                  <Label fx:id="E1WindSpeed" layoutX="94.0" layoutY="105.0" prefHeight="21.0" prefWidth="64.0" />
-                  <Label fx:id="E1WindDire" layoutX="109.0" layoutY="125.0" prefHeight="21.0" prefWidth="57.0" />
+                  <Label fx:id="E1Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E1Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E1WindSpeed" layoutX="94.0" layoutY="105.0" prefHeight="21.0" prefWidth="100.0" />
+                  <Label fx:id="E1WindDire" layoutX="109.0" layoutY="125.0" prefHeight="21.0" prefWidth="82.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="201.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -119,6 +125,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E2Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="128.0" />
+                  <Label fx:id="E2Temp" layoutX="103.0" layoutY="45.0" prefHeight="21.0" prefWidth="82.0" />
+                  <Label fx:id="E2Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="118.0" />
+                  <Label fx:id="E2Humi" layoutX="81.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E2WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="100.0" />
+                  <Label fx:id="E2WindDire" layoutX="115.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="402.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -153,6 +165,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E3Date" layoutX="51.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E3Temp" layoutX="106.0" layoutY="45.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E3Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="118.0" />
+                  <Label fx:id="E3Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E3WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E3WindDire" layoutX="115.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="603.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -187,6 +205,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E4Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E4Temp" layoutX="106.0" layoutY="45.0" prefHeight="21.0" prefWidth="82.0" />
+                  <Label fx:id="E4Pre" layoutX="79.0" layoutY="65.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E4Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E4WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E4WindDire" layoutX="117.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="201.0" layoutY="180.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -221,6 +245,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E6Date" layoutX="54.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E6Temp" layoutX="104.0" layoutY="45.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E6Pre" layoutX="73.0" layoutY="65.0" prefHeight="21.0" prefWidth="118.0" />
+                  <Label fx:id="E6Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E6WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E6WindDire" layoutX="115.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="402.0" layoutY="180.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -255,6 +285,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E7Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E7Temp" layoutX="106.0" layoutY="45.0" prefHeight="21.0" prefWidth="86.0" />
+                  <Label fx:id="E7Pre" layoutX="79.0" layoutY="65.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E7Humi" layoutX="81.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E7WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E7WindDire" layoutX="119.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="603.0" layoutY="180.0" prefHeight="170.0" prefWidth="197.0" style="-fx-background-color: #3e66a8;">
@@ -289,6 +325,12 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="E8Date" layoutX="56.0" layoutY="14.0" prefHeight="21.0" prefWidth="135.0" />
+                  <Label fx:id="E8Temp" layoutX="106.0" layoutY="45.0" prefHeight="21.0" prefWidth="82.0" />
+                  <Label fx:id="E8Pre" layoutX="79.0" layoutY="65.0" prefHeight="21.0" prefWidth="106.0" />
+                  <Label fx:id="E8Humi" layoutX="79.0" layoutY="85.0" prefHeight="21.0" prefWidth="111.0" />
+                  <Label fx:id="E8WindSpeed" layoutX="97.0" layoutY="105.0" prefHeight="21.0" prefWidth="93.0" />
+                  <Label fx:id="E8WindDire" layoutX="115.0" layoutY="125.0" prefHeight="21.0" prefWidth="76.0" />
                </children>
             </AnchorPane>
          </children>

@@ -33,12 +33,12 @@ public class RootViewController
     public Label windDirLabel;
     public ChoiceBox choiceRecord;
 
-    public Label E1Date;
-    public Label E1Temp;
-    public Label E1Pre;
-    public Label E1Humi;
-    public Label E1WindSpeed;
-    public Label E1WindDire;
+    public Label E1Date, E2Date, E3Date, E4Date, E5Date, E6Date, E7Date, E8Date;
+    public Label E1Temp, E2Temp, E3Temp, E4Temp, E5Temp, E6Temp, E7Temp, E8Temp;
+    public Label E1Pre, E2Pre, E3Pre, E4Pre, E5Pre, E6Pre, E7Pre, E8Pre;
+    public Label E1Humi, E2Humi, E3Humi, E4Humi, E5Humi, E6Humi, E7Humi, E8Humi;
+    public Label E1WindSpeed, E2WindSpeed, E3WindSpeed, E4WindSpeed, E5WindSpeed, E6WindSpeed, E7WindSpeed, E8WindSpeed;
+    public Label E1WindDire, E2WindDire, E3WindDire, E4WindDire, E5WindDire, E6WindDire, E7WindDire, E8WindDire;
     public ImageView weatherImage;
 
     public CurrentWeather weather;
@@ -117,6 +117,56 @@ public class RootViewController
         E1Humi.setText(tabExpectedWeather[0].getHumidity().toString());
         E1WindSpeed.setText(tabExpectedWeather[0].getWind_speed().toString());
         E1WindDire.setText(tabExpectedWeather[0].getWind_direction().toString());
+
+        E2Date.setText(tabExpectedWeather[1].getDateTime());
+        E2Temp.setText(tabExpectedWeather[1].getTemperature().toString());
+        E2Pre.setText(tabExpectedWeather[1].getPressure().toString());
+        E2Humi.setText(tabExpectedWeather[1].getHumidity().toString());
+        E2WindSpeed.setText(tabExpectedWeather[1].getWind_speed().toString());
+        E2WindDire.setText(tabExpectedWeather[1].getWind_direction().toString());
+
+        E3Date.setText(tabExpectedWeather[2].getDateTime());
+        E3Temp.setText(tabExpectedWeather[2].getTemperature().toString());
+        E3Pre.setText(tabExpectedWeather[2].getPressure().toString());
+        E3Humi.setText(tabExpectedWeather[2].getHumidity().toString());
+        E3WindSpeed.setText(tabExpectedWeather[2].getWind_speed().toString());
+        E3WindDire.setText(tabExpectedWeather[2].getWind_direction().toString());
+
+        E4Date.setText(tabExpectedWeather[3].getDateTime());
+        E4Temp.setText(tabExpectedWeather[3].getTemperature().toString());
+        E4Pre.setText(tabExpectedWeather[3].getPressure().toString());
+        E4Humi.setText(tabExpectedWeather[3].getHumidity().toString());
+        E4WindSpeed.setText(tabExpectedWeather[3].getWind_speed().toString());
+        E4WindDire.setText(tabExpectedWeather[3].getWind_direction().toString());
+
+        E5Date.setText(tabExpectedWeather[4].getDateTime());
+        E5Temp.setText(tabExpectedWeather[4].getTemperature().toString());
+        E5Pre.setText(tabExpectedWeather[4].getPressure().toString());
+        E5Humi.setText(tabExpectedWeather[4].getHumidity().toString());
+        E5WindSpeed.setText(tabExpectedWeather[4].getWind_speed().toString());
+        E5WindDire.setText(tabExpectedWeather[4].getWind_direction().toString());
+
+        E6Date.setText(tabExpectedWeather[5].getDateTime());
+        E6Temp.setText(tabExpectedWeather[5].getTemperature().toString());
+        E6Pre.setText(tabExpectedWeather[5].getPressure().toString());
+        E6Humi.setText(tabExpectedWeather[5].getHumidity().toString());
+        E6WindSpeed.setText(tabExpectedWeather[5].getWind_speed().toString());
+        E6WindDire.setText(tabExpectedWeather[5].getWind_direction().toString());
+
+        E7Date.setText(tabExpectedWeather[6].getDateTime());
+        E7Temp.setText(tabExpectedWeather[6].getTemperature().toString());
+        E7Pre.setText(tabExpectedWeather[6].getPressure().toString());
+        E7Humi.setText(tabExpectedWeather[6].getHumidity().toString());
+        E7WindSpeed.setText(tabExpectedWeather[6].getWind_speed().toString());
+        E7WindDire.setText(tabExpectedWeather[6].getWind_direction().toString());
+
+        E8Date.setText(tabExpectedWeather[7].getDateTime());
+        E8Temp.setText(tabExpectedWeather[7].getTemperature().toString());
+        E8Pre.setText(tabExpectedWeather[7].getPressure().toString());
+        E8Humi.setText(tabExpectedWeather[7].getHumidity().toString());
+        E8WindSpeed.setText(tabExpectedWeather[7].getWind_speed().toString());
+        E8WindDire.setText(tabExpectedWeather[7].getWind_direction().toString());
+
     }
 
     public void initChoiceBox()
