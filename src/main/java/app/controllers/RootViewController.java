@@ -9,9 +9,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.openweathermap.api.model.forecast.ForecastInformation;
 import org.openweathermap.api.model.forecast.hourly.HourlyForecast;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,6 +39,7 @@ public class RootViewController
     public Label E1Humi;
     public Label E1WindSpeed;
     public Label E1WindDire;
+    public ImageView weatherImage;
 
     public CurrentWeather weather;
     public ExpectedWeather[] tabExpectedWeather = new ExpectedWeather[8];
@@ -63,18 +67,27 @@ public class RootViewController
 
         int i=0;
         ForecastInformation<HourlyForecast> forecastInformation = wnfo.hourlyWeather();
-        for( HourlyForecast forecast : forecastInformation.getForecasts() )
-        {
+        for( HourlyForecast forecast : forecastInformation.getForecasts() ) {
             double rain;
             double snow;
-            if( forecast.getRain() == null)
+            if (forecast.getRain() == null)
                 rain = 0.0;
-            else
-                rain =  forecast.getRain().getThreeHours();
+            else {
+                rain = forecast.getRain().getThreeHours();
+                weatherImage.setImage(new Image(new File("src/main/java/images/rain.png").toURI().toString()));
+            }
             if(forecast.getSnow() == null)
                 snow = 0.0;
-            else
+            else {
                 snow = forecast.getSnow().getThreeHours();
+                weatherImage.setImage(new Image(new File("src/main/java/images/snow.png").toURI().toString()));
+            }
+            if (forecast.getClouds() == null) {
+
+            } else {
+                weatherImage.setImage(new Image(new File("src/main/java/images/cloudy.png").toURI().toString()));
+                weatherImage.setVisible(true);
+            }
             tabExpectedWeather[i] = new ExpectedWeather(s, weather.getDate(), forecast.getDateTime().toString(), forecast.getClouds().getAll(), forecast.getMainParameters().getHumidity(), forecast.getMainParameters().getPressure(), rain, snow, forecast.getMainParameters().getTemperature(), forecast.getWind().getSpeed(), forecast.getWind().getDirection().getDegree() );
             tabExpectedWeather[i].save();
             i++;

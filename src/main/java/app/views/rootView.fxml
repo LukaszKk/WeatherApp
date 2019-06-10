@@ -4,10 +4,11 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #74a6f7;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.RootViewController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #74a6f7;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.RootViewController">
    <children>
       <TextField fx:id="city" layoutX="233.0" layoutY="72.0" prefHeight="25.0" prefWidth="334.0" />
       <AnchorPane layoutY="250.0" prefHeight="350.0" prefWidth="800.0" style="-fx-background-color: #1f6ae2;">
@@ -331,5 +332,6 @@
       <Label fx:id="windDirLabel" layoutX="138.0" layoutY="216.0" prefHeight="21.0" prefWidth="59.0" />
       <ChoiceBox fx:id="choiceRecord" layoutX="21.0" layoutY="37.0" prefWidth="150.0" />
       <Button fx:id="showRecord" layoutX="64.0" layoutY="72.0" mnemonicParsing="false" onAction="#showRecordAction" text="Show" />
+      <ImageView fx:id="weatherImage" fitHeight="117.0" fitWidth="168.0" layoutX="233.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
